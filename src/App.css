@@ -1,0 +1,61 @@
+/* Define base colors for both light and dark themes */
+:root {
+  --primary-color: #007bff;
+  --text-color: #000;
+  --bg-color: #fff;
+  --navbar-bg: #f8f9fa;
+  --navbar-text: #0c1c3c;
+}
+
+[data-theme="dark"] {
+  --primary-color: #1e3a8a;
+  --text-color: #fff;
+  --bg-color: #121212;
+  --navbar-bg: #333;
+  --navbar-text: #fff;
+}
+
+/* Use the variables throughout your app */
+.App {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+}
+
+.navbar-brand {
+  color: var(--navbar-text);
+  margin-left: 2%;
+}
+
+.nav-link {
+  color: var(--navbar-text);
+}
+
+.navbar-toggler-icon {
+  /* background-color: var(--navbar-text); */
+}
+
+.btn-dark {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-dark:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+/* Supprimer le contour bleu et box-shadow sur le switch */
+.form-check-input:focus {
+  outline: none !important; /* Enlever le contour */
+  box-shadow: none !important; /* Supprimer l'ombre du focus */
+}
+
+/* Personnalisation de la couleur de fond du switch */
+.form-check-input {
+  background-color: #0c1c3c;
+  transition: background-color 0.3s ease;
+}
